@@ -1,0 +1,33 @@
+<form #myForm="ngForm"  (ngSubmit)="onSubmit(myForm.value)" class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Full Name</mat-label>
+      <input type="text"
+             placeholder="Full Name"
+             aria-label="city"
+             name="fullname"
+             matInput
+             [(ngModel)]="customer.fullname"
+             required>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Contact Number</mat-label>
+        <input type="text"
+               placeholder="Contact Number"
+               aria-label="city"
+               name="number"
+               matInput
+               [(ngModel)]="customer.number"
+               required>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input type="text"
+               placeholder="Email"
+               aria-label="city"
+               name="email"
+               matInput
+               [(ngModel)]="customer.email"
+               required>
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="warn" [disabled]="myForm.invalid"><a [routerLink]="['/feedback']">Submit</a></button>
+      </form>

@@ -1,0 +1,66 @@
+<mat-toolbar class="toolbar">
+    <button mat-icon-button class="example-icon brand" aria-label="Example icon-button with menu icon">
+      <span class="material-icons icon">directions_car</span>carwale
+    </button>
+    <a href="">NEWCARS</a>
+    <a href="">USEDCARS</a>
+    <a href="">REVIEWS&NEWS</a>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <span class="material-icons">
+        location_on
+        </span>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <span class="material-icons">
+        translate
+        </span>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <span class="material-icons">
+        account_circle
+        </span>
+    </button>
+  </mat-toolbar><hr>
+<div class="container">
+    <img src="/assets/ad1.gif" alt="advertisement"><br>
+    <h1>Tata Nexon</h1>
+    <span class="material-icons green">star_rate</span>
+    <span class="material-icons green">star_rate</span>
+    <span class="material-icons green">star_rate</span>
+    <span class="material-icons green">star_rate</span>
+    <span class="material-icons">star_border</span>
+    <span class="review">414 Reviews </span>
+    <span> | </span>
+    <span class="review">Write a Review</span>
+    <mat-toolbar class="toolbar">
+      <a href="" class="bottom-nav">NEXON</a>
+      <a href="" class="bottom-nav">VERSIONS</a>
+      <a href="" class="bottom-nav">IMAGES</a>
+      <a href="" class="bottom-nav">EXPERT REVIEWS</a>
+      <a href="" class="bottom-nav">COLOURS</a>
+      <a href="" class="bottom-nav">MILEAGE</a>
+      <a href="" class="bottom-nav">USED NEXON</a>
+    </mat-toolbar><hr>
+    <img class="img2" src="assets\tata-nexon.jpeg" alt="Tata-Nexon"><br>
+    <mat-drawer-container  class="example-container" >
+      <mat-drawer  position="end"  [mode]="mode.value">
+      </mat-drawer>
+      <mat-drawer-content >
+        <mat-form-field>
+          <mat-label>Version</mat-label>
+          <mat-select #mode value="side">
+            <mat-option value="side">XE</mat-option>
+            <mat-option value="over">Petrol</mat-option>
+            <mat-option value="push">Diesel</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+        <span class="amount">{{money | currency:'INR'}} Lakh</span><br>
+        <span>Avg.Ex-Showroom Price</span><br><br><br>
+      </mat-drawer-content>
+    </mat-drawer-container>
+</div>
+
+
+

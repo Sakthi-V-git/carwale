@@ -1,0 +1,17 @@
+<mat-form-field class="example-full-width">
+    <mat-label>Choose your city</mat-label>
+    <input type="text"
+           placeholder="Pick one"
+           aria-label="city"
+           name="city"
+           matInput
+           [(ngModel)]="customer.city"
+           [formControl]="myControl"
+           [matAutocomplete]="auto" required>
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name">
+        {{option.name}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+  <button type="submit" mat-raised-button color="warn" class="button" ><a [routerLink]="['/details']">Submit</a></button>

@@ -1,0 +1,13 @@
+<mat-sidenav-container class="example-container" position="over">
+    <mat-sidenav  #sidenav class="sidenav" position="end">
+        <br><h1>Tata Nexon</h1>
+      <p>Provide your contact details for Test Drive</p>
+
+    <router-outlet></router-outlet>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-offers></app-offers>
+        <p><button mat-raised-button color="warn" class="offer" (click)="sidenav.toggle()">Get February Offers</button></p>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
