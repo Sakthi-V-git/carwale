@@ -5,13 +5,16 @@
            aria-label="city"
            name="city"
            matInput
-           [(ngModel)]="customer.city"
+           [(ngModel)]="userinput"
+           (keyup)="getCity(userinput)"
            [formControl]="myControl"
            [matAutocomplete]="auto" required>
     <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name">
-        {{option.name}}
+      <div *ngIf="options">
+      <mat-option *ngFor="let option of options" [value]="option.result">
+        {{option.result}}
       </mat-option>
+      </div>
     </mat-autocomplete>
   </mat-form-field>
   <button type="submit" mat-raised-button color="warn" class="button" ><a [routerLink]="['/details']">Submit</a></button>

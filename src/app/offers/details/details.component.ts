@@ -17,7 +17,7 @@ export class DetailsComponent implements OnInit {
   ngOnInit(): void {
   }
   public customer:customer= {
-
+    id:0,
     fullname:'',
     number:'',
     email:'',

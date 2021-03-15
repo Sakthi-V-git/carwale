@@ -1,3 +1,4 @@
+<button class="button1" (click)="customerDetails()">Customer Details</button>
 <mat-accordion>
     <mat-expansion-panel hideToggle>
       <mat-expansion-panel-header>
@@ -8,19 +9,19 @@
       <table class="mat-elevation-z8" >
         <thead>
             <tr>
+                <th> Id</th>
                 <th> Name</th>
-                <th> Number</th>
+                <th>Number</th>
                 <th>Email</th>
-                <th>City</th>
             </tr>
         </thead>
-        <tbody >
-            <!-- <tr >
-                <th>{{ customer.fullname }}</th>
+        <tbody *ngFor="let customer of userDetails.customer">
+            <tr >
+              <td>{{customer.id}}</td>
+                <td>{{ customer.fullname }}</td>
                 <td>{{ customer.number}}</td>
                 <td>{{ customer.email }}</td>
-                <td>{{ customer.city }}</td>
-            </tr> -->
+            </tr>
         </tbody>
     </table>
     </mat-expansion-panel>

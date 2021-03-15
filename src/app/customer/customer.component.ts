@@ -10,12 +10,13 @@ import { Customer } from './customer.model';
   styleUrls: ['./customer.component.scss']
 })
 export class CustomerComponent implements OnInit {
-  customer:Array<customer>;
-  constructor(public activatedRoute:ActivatedRoute, private userDetails :CustomerService) { 
+  customerInfo:string="none";
+  constructor( public userDetails :CustomerService) { 
   }
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe((data:Array<customer>)=>{this.customer=data})
   }
- debugger
+  customerDetails(){
+    this.customerInfo="block";
+  }
   displayedColumns: string[] = ['fullname', 'number', 'email', 'city'];
 }
